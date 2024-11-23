@@ -4,7 +4,8 @@
 ## LocalStorage with JavaScript
 LocalStorage is a browser feature that allows you to store data persistently on the client side. This data remains even if the user refreshes the page or closes and reopens the browser. It's a great tool for saving game progress, scores, settings, or any other small data without involving a server.
 
-## In this guide, we will show you how to enhance your Rock-Paper-Scissors Game by using LocalStorage. The core functionality includes:
+## In this guide:
+we will show you how to enhance your Rock-Paper-Scissors Game by using LocalStorage. The core functionality includes:
 
 - **Saving the user's score**: Track the player's win/loss record and save it to LocalStorage to persist the data across sessions.
   
