@@ -30,7 +30,7 @@ LocalStorage is a browser feature that allows you to store data persistently on 
 
 ## Live Demo
 You can play the game live by visiting this URL :
-[Live Demo of Rock Paper Scissors]([https://your-username.github.io/rock-paper-scissors-game/](https://rahaf-ayn-kraie.github.io/rock-paper-scissors-game/))
+[Live Demo of Rock Paper Scissors](https://rahaf-ayn-kraie.github.io/rock-paper-scissors-game/)
 
 ### 1. **HTML**:
 The HTML structure provided defines a simple and interactive **Rock Paper Scissors game**. It uses semantic elements and includes essential metadata like author, description, and keywords to enhance its searchability and accessibility. The game consists of:
