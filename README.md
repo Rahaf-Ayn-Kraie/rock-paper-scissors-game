@@ -49,21 +49,19 @@ This CSS styles a Rock, Paper, Scissors game with a modern look. It uses CSS var
 The page is styled using external CSS, reset styles for consistency, and Google Fonts for a modern look. It also includes Font Awesome for icons and integrates JavaScript to handle game functionality
 
 ### 3. **JavaScript**:
-- 1.**Function to selecte DOM Elements**: The select function simplifies selecting elements
+- 1.**Function to selecte DOM & to add Event Listeners Elements**: The select function selects a DOM element using a CSS selector, optionally within a specific scope. The listen function adds an event listener to an element, triggering a callback when the event occurs.
 ```
 function select(selector, scope = document) {
   return scope.querySelector(selector);
 }
 
-// Example: Selecting buttons and text elements
-const rockButton = select('.rock-button');
-const resultText = select('.result');
-```
-- 2.**Function to add Event Listeners**: The listen function binds event listeners to elements
-```
 function listen(event, selector, callback) {
   return selector.addEventListener(event, callback);
 }
+
+// Example: Selecting buttons and text elements
+const rockButton = select('.rock-button');
+const resultText = select('.result');
 
 // Example: Handling button clicks
 listen('click', rockButton, () => playGame('rock'));
@@ -73,6 +71,31 @@ listen('click', resetButton, () => {
   score.ties = 0;
 });
 ```
+
+- 2.**Playing the Gamee**: Determine the winner based on player and computer moves:
+```
+function playGame(playerMove) {
+  const computerMove = getComputerMove();
+  const winner = getWinner(playerMove, computerMove);
+
+  movesText.textContent = `You played ${playerMove}, Computer played ${computerMove}.`;
+
+  if (winner === 'player') {
+    score.wins++;
+    resultText.textContent = 'You win!';
+  } else if (winner === 'computer') {
+    score.losses++;
+    resultText.textContent = 'Computer wins!';
+  } else {
+    score.ties++;
+    resultText.textContent = 'It\'s a tie!';
+  }
+
+  updateScore();
+}
+
+```
+
 - 3.**Storing and Retrieving Data with LocalStorage**: You use LocalStorage to persist game scores across sessions
 ```
 localStorage.setItem('score', JSON.stringify(score));
@@ -84,6 +107,20 @@ if (savedScore) {
   score.losses = savedScore.losses;
   score.ties = savedScore.ties;
 }
+```
+
+- 4.**Resetting Game Data**: Reset scores and clear LocalStorage:
+```
+listen('click', resetButton, () => {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScore();
+  resultText.textContent = ''; 
+  movesText.textContent = '';
+});
+
 ```
 
 ## Installation and Setup
