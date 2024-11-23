@@ -13,9 +13,9 @@ LocalStorage is a browser feature that allows you to store data persistently on 
 - **Resetting scores**: Allow the user to reset their score, clearing the saved data from LocalStorage.
 
 ## Features
-- **Game Result: ** The game displays the outcome (Win, Lose, or Draw) after each round.
+- **Game Result:** The game displays the outcome (Win, Lose, or Draw) after each round.
   
-- **Score Persistence: ** Player scores are stored in the browser's LocalStorage, so the score persists even after refreshing or closing the browser.
+- **Score Persistence:** Player scores are stored in the browser's LocalStorage, so the score persists even after refreshing or closing the browser.
   
 - **Reset Game:** sers can reset the game, which will clear the scores stored in LocalStorage.
 
