@@ -35,11 +35,11 @@ You can play the game live by visiting this URL :
 ### 1. **HTML**:
 The HTML structure provided defines a simple and interactive **Rock Paper Scissors game**. It uses semantic elements and includes essential metadata like author, description, and keywords to enhance its searchability and accessibility. The game consists of:
 
-- **Title and Instruction**: Clear headings (<p>) guide users to pick their choice.
+- **Title and Instruction**: Clear headings (`<p>`) guide users to pick their choice.
   
 - **Buttons for Choices**: Rock, Paper, and Scissors options are represented visually with emoji images.
   
-- **Result and Score Display**: Dynamic paragraphs (<p>) show game outcomes and keep track of scores.
+- **Result and Score Display**: Dynamic paragraphs (`<p>`) show game outcomes and keep track of scores.
   
 -**Reset Button**: A button to reset the game scores and start fresh.
 
