@@ -51,7 +51,7 @@ The page is styled using external CSS, reset styles for consistency, and Google 
 
 ### 3. **JavaScript**:
 - 1.**Function to selecte DOM & to add Event Listeners Elements**: The select function selects a DOM element using a CSS selector, optionally within a specific scope. The listen function adds an event listener to an element, triggering a callback when the event occurs.
-```
+``` JavaScript
 function select(selector, scope = document) {
   return scope.querySelector(selector);
 }
@@ -74,7 +74,7 @@ listen('click', resetButton, () => {
 ```
 
 - 2.**Playing the Gamee**: Determine the winner based on player and computer moves:
-```
+``` JavaScript
 function playGame(playerMove) {
   const computerMove = getComputerMove();
   const winner = getWinner(playerMove, computerMove);
@@ -98,7 +98,7 @@ function playGame(playerMove) {
 ```
 
 - 3.**Storing and Retrieving Data with LocalStorage**: You use LocalStorage to persist game scores across sessions
-```
+``` JavaScript
 localStorage.setItem('score', JSON.stringify(score));
 
 // Retrieve saved data from LocalStorage
@@ -111,7 +111,7 @@ if (savedScore) {
 ```
 
 - 4.**Resetting Game Data**: Reset scores and clear LocalStorage:
-```
+``` JavaScript
 listen('click', resetButton, () => {
   score.wins = 0;
   score.losses = 0;
